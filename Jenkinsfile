@@ -2,10 +2,18 @@ pipeline {
     agent any  // Use any available agent
 
     stages {
-        stage("Checkout or Fetch Code") {
+        stage("Checkout Code") {
             steps {
-                // Checkout the code from the repository
-                git 'https://github.com/MuhamedMaher/nodejs.org.git' // Replace with your GitHub repo URL
+                script {
+                    if (!fileExists('nodejs.org')) {
+                        sh 'git clone https://github.com/MuhamedMaher/nodejs.org.git'
+                    }
+                    dir('nodejs.org') {
+                        sh 'git fetch origin'
+                        sh 'git checkout main'
+                        sh 'git pull'
+                    }
+                }
             }
         }
 
