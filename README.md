@@ -69,10 +69,12 @@ A Docker Hub account with your Docker image
 
 ### Step 1: Install Minikube and kubectl
 Install Minikube on your second VM:
+
 curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
 sudo install minikube /usr/local/bin/
 
 Install kubectl:
+
 curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
 chmod +x kubectl
 sudo mv kubectl /usr/local/bin/
@@ -104,7 +106,7 @@ kubectl get secret -n argocd argocd-initial-admin-secret -o jsonpath="{.data.pas
 
 ### Step 6: Configure ArgoCD to Manage the Deployment
 
-#Conclusion
+# Conclusion
 With this setup, your Node.js application is deployed on a Kubernetes cluster using Minikube. The application is managed through ArgoCD for continuous delivery, and all changes to the k8 directory will trigger updates to the deployment.
 
 
