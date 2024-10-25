@@ -15,11 +15,6 @@ This project demonstrates how to deploy a **Node.js** application from a GitHub 
    - Minikube installed  
    - kubectl installed  
    - ArgoCD installed  
-
-3. **Accounts Required:**
-   - GitHub account  
-   - DockerHub account  
-
 ---
 ## Part 1: Jenkins Setup and Dockerization
 
@@ -27,7 +22,6 @@ This project demonstrates how to deploy a **Node.js** application from a GitHub 
 
 1. Go to the **[Node.js GitHub repository](https://github.com/nodejs/nodejs.org.git)**.  
 2. Click on the **Fork** button to create a copy under your GitHub account.
-
 ---
 
 ### Step 2: Clone the Repository on Jenkins VM
@@ -35,7 +29,6 @@ This project demonstrates how to deploy a **Node.js** application from a GitHub 
 ``bash
 git clone https://github.com/<your-username>/nodejs.org.git
 cd nodejs.org
-
 
 ### Step 3: Build the Application and Run Unit Tests Locally
 Install Node.js v18 on your VM.
@@ -57,21 +50,19 @@ git push origin main
 ### Step 5: Set Up Jenkins Pipeline
 ![WhatsApp Image 2024-10-25 at 14 52 04_edba26fa](https://github.com/user-attachments/assets/5aac3758-f2bc-4c48-9a4f-d557fd632277)
 ![WhatsApp Image 2024-10-25 at 14 52 50_ba47908f](https://github.com/user-attachments/assets/305a3fed-abd3-4a8c-9598-279e398b9580)
+#### pushed to dockerhub
 ![WhatsApp Image 2024-10-25 at 14 54 29_be8d2dbf](https://github.com/user-attachments/assets/22d9e0c3-dbad-43b9-b898-7f2514a19cd9)
-
-
-
 
 ## Kubernetes Deployment
  we will deploy the Node.js application on a local Kubernetes cluster. We will use Minikube to set up the cluster and ArgoCD for continuous delivery. Additionally, a deployment.yaml file will be created and pushed to the GitHub repository for version control.
 
 Prerequisites
-Virtual Machine (VM) for Minikube
-Minikube installed on the VM
-kubectl installed on the VM
-ArgoCD installed on Minikube
-GitHub Repository (e.g., https://github.com/MuhamedMaher/nodejs.org.git)
-A Docker Hub account with your Docker image
+-Virtual Machine (VM) for Minikube
+-Minikube installed on the VM
+-kubectl installed on the VM
+-ArgoCD installed on Minikube
+-GitHub Repository (e.g., https://github.com/MuhamedMaher/nodejs.org.git)
+-A Docker Hub account with your Docker image
 
 ### Step 1: Install Minikube and kubectl
 Install Minikube on your second VM:
