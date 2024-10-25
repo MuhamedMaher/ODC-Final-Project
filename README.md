@@ -55,6 +55,12 @@ git commit -m "Add Dockerfile"
 git push origin main
 
 ### Step 5: Set Up Jenkins Pipeline
+![WhatsApp Image 2024-10-25 at 14 52 04_edba26fa](https://github.com/user-attachments/assets/5aac3758-f2bc-4c48-9a4f-d557fd632277)
+![WhatsApp Image 2024-10-25 at 14 52 50_ba47908f](https://github.com/user-attachments/assets/305a3fed-abd3-4a8c-9598-279e398b9580)
+![WhatsApp Image 2024-10-25 at 14 54 29_be8d2dbf](https://github.com/user-attachments/assets/22d9e0c3-dbad-43b9-b898-7f2514a19cd9)
+
+
+
 
 ## Kubernetes Deployment
  we will deploy the Node.js application on a local Kubernetes cluster. We will use Minikube to set up the cluster and ArgoCD for continuous delivery. Additionally, a deployment.yaml file will be created and pushed to the GitHub repository for version control.
@@ -103,11 +109,17 @@ kubectl get secret -n argocd argocd-initial-admin-secret -o jsonpath="{.data.pas
 ### Step 4: Push the Kubernetes Files to GitHub
 
 ### Step 5: Deploy the Node.js App to Kubernetes
+![WhatsApp Image 2024-10-25 at 14 57 27_e8e85a1e](https://github.com/user-attachments/assets/c7669cb8-a216-4c88-b992-694116289065)
+
 
 ### Step 6: Configure ArgoCD to Manage the Deployment
+![WhatsApp Image 2024-10-25 at 14 57 54_1b298268](https://github.com/user-attachments/assets/92d50ec5-61f9-426c-b26a-5b22dfa7dc7c)
+
 
 # Conclusion
 With this setup, your Node.js application is deployed on a Kubernetes cluster using Minikube. The application is managed through ArgoCD for continuous delivery, and all changes to the k8 directory will trigger updates to the deployment.
+![image](https://github.com/user-attachments/assets/18a2d2fe-1b2b-40f5-9bea-740e7c904b1f)
+
 
 
 
