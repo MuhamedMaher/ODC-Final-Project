@@ -16,9 +16,9 @@ spec:
     spec:
       containers:
       - name: nodejs-app
-        image: mohamedmaher77/nodejs-app # Replace with your Node.js Docker image
+        image: mohamedmaher77/nodejs-app 
         ports:
-        - containerPort: 3000 # Change to your application's port if different
+        - containerPort: 3000 
         env:
         - name: NODE_ENV
           value: "production"
